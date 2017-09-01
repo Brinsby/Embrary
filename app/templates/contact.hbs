@@ -8,11 +8,18 @@
   {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
 </div>
 <div class="form-group">
-  <label>Comment:</label>
+  <label>Comment-a-roo:</label>
   <!--<textarea class="form-control" rows="8" id="comment"></textarea>-->
-  {{textarea class="form-control" rows="8" value=message placeholder="Your message. (At least 5 characters.)"}}
+  {{textarea class="form-control" rows="8" value=contactMessage placeholder="Your message. (At least 5 characters.)"}}
 </div>
 
 <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3 pull-right">
-  <button class="btn btn-primary btn-lg btn-block" disabled={{isDisabled}} {{action 'sendMessage'}}>Send Message</button>
+  <button class="btn btn-primary btn-lg btn-block" disabled={{isDisabled}} {{action 'saveContactMessage'}}>Send Message</button>
 </div>
+
+<br/>
+<br/>
+
+{{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+{{/if}}
