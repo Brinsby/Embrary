@@ -1,6 +1,13 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   emailAddress: DS.attr('string'),
-  contactMessage: DS.attr('string')
+  contactMessage: DS.attr('string'),
+
+  isValidEmail: Ember.computed.match('email', /^.+@.+\..+$/),
+  isMessageEnoughLong: Ember.computed.gte('message.length', 5),
+
+  isValid: Ember.computed.and('isValidEmail', 'isMessageEnoughLong'),
+  isNotValid: Ember.computed.not('isValid')
 });
