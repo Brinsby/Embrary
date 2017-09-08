@@ -1,9 +1,10 @@
-# demo-app
+# Embrary
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an application that mimicks a library database front end (kind of). It was built mostly as a way to learn ember 
+and test out its features.
 
-## Prerequisites
+## Prerequisites to Run
 
 You will need the following things properly installed on your computer.
 
@@ -12,9 +13,9 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](https://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
+## App Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/Brinsby/Embrary.git` 
 * `cd demo-app`
 * `npm install`
 
@@ -29,6 +30,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
+These dont really do much as of right now but they may later on if I try to get them to work.
+
 * `ember test`
 * `ember test --server`
 
@@ -39,7 +42,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+You need to hook it up to my public firebase server and use `firebase deploy` to push the dist folder to the firebase 
+server
 
 ## Further Reading / Useful Links
 

@@ -9,9 +9,11 @@ export default DS.Model.extend({
   author: DS.belongsTo('author', {inverse: 'books', async: true}),
   library: DS.belongsTo('library', {inverse: 'books', async: true}),
 
+  isNotValid: Ember.computed.empty('title'),
+
   randomize(author, library) {
     this.set('title', this._bookTitle());
-    this.set('author', author);
+    this.set('author', Faker.name.findName());
     this.set('releaseYear', this._randomYear());
     this.set('library', library);
 
